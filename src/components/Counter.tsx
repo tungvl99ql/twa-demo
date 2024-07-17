@@ -39,7 +39,7 @@ export function Counter() {
               sendTransfer("0QD-SuoCHsCL2pIZfE8IAKsjc0aDpDUQAoo-ALHl2mje04A-",10);
             }}
           >
-            Increment
+            Increment/ Transfer USD₮
           </Button>
         </FlexBoxCol>
       </Card>
