@@ -9,6 +9,7 @@ import {
   toNano,
 } from "ton-core";
 
+
 export default class FaucetJetton implements Contract {
   async sendMintFromFaucet(
     provider: ContractProvider,

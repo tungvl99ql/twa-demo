@@ -1,6 +1,7 @@
 import { TonConnectButton } from "@tonconnect/ui-react";
 import { useCounterContract } from "../hooks/useCounterContract";
 import { useTonConnect } from "../hooks/useTonConnect";
+import { useJettonTransferContract } from "../hooks/useTransferJetton";
 
 import {
   Card,
@@ -13,6 +14,7 @@ import {
 export function Counter() {
   const { connected } = useTonConnect();
   const { value, address, sendIncrement } = useCounterContract();
+  const {sendTransfer } = useJettonTransferContract();
 
   return (
     <div className="Container">
@@ -33,7 +35,8 @@ export function Counter() {
             disabled={!connected}
             className={`Button ${connected ? "Active" : "Disabled"}`}
             onClick={() => {
-              sendIncrement();
+              // sendIncrement();
+              sendTransfer("0QD-SuoCHsCL2pIZfE8IAKsjc0aDpDUQAoo-ALHl2mje04A-",10);
             }}
           >
             Increment
